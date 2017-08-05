@@ -9,17 +9,21 @@ import java.util.stream.Collectors;
  */
 public class PredicateUtils {
 
+    public static Predicate<Person> isBaby(){
+        return person -> person.getAge() > 0 &&  person.getAge() <= 4;
+    }
 
     public static Predicate<Person> isAdult(){
         return person -> person.getAge() > 18;
     }
+
 
     public static Predicate<Person> isKid(){
         return person -> person.getAge() > 4;
     }
 
     public static Predicate<Person> isTeen(){
-        return person -> person.getAge() > 15;
+        return person -> person.getAge() > 13;
     }
 
 

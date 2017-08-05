@@ -22,7 +22,7 @@ public class PredicateUtilsTest {
                         new Person("adult", 20));
 
 
-        List<Person> babies = PredicateUtils.filter(personList, PredicateUtils.isKid().negate());
+        List<Person> babies = PredicateUtils.filter(personList, PredicateUtils.isBaby());
         assertThat(babies.size()).isEqualTo(1);
 
 
